@@ -54,12 +54,9 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-    //let max = 1.7976931348623157e+308;
-    let max = Number.MAX_VALUE;
-    if (max < ((value1 + value2) / 2))
-        return 1.7976931348623157e+308;
+    if (Number.MAX_VALUE < ((value1 + value2) / 2))
+        return Number.MAX_VALUE;
     return ((value1 + value2) / 2);
-    //return (value1/2 + value2/2);
 }
 
 /**
@@ -79,7 +76,7 @@ function getAverage(value1, value2) {
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
     //return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-    return Math.hypot((x2-x1),(y2-y1));
+    return Math.hypot((x2 - x1), (y2 - y1));
 }
 
 /**
@@ -171,7 +168,7 @@ function parseNumberFromString(value) {
  */
 function getParallelipidedDiagonal(a, b, c) {
     //return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2));
-    return Math.hypot(a,b,c);
+    return Math.hypot(a, b, c);
 }
 
 /**
